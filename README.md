@@ -10,16 +10,16 @@ All time entries can be exported to excel for further analysis.
  
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/my443/volcano-time-tracker/master/img/Screenshot1.png" alt="Screenshot #1">
-Keep a list of all of your projects.
-<img src="https://raw.githubusercontent.com/my443/volcano-time-tracker/master/img/Screenshot2.png" alt="Screenshot #2">
-When you do work, enter the time that you worked on that project.
-<img src="https://raw.githubusercontent.com/my443/volcano-time-tracker/master/img/Screenshot3.png" alt="Screenshot #3">
-Time entries can hold notes and information on the work completed.
-<img src="https://raw.githubusercontent.com/my443/volcano-time-tracker/master/img/Screenshot4.png" alt="Screenshot #4">
-Summary of a selected date`s time entries are reported in the Today`s Time tab.
-<img src="https://raw.githubusercontent.com/my443/volcano-time-tracker/master/img/Screenshot4.png" alt="Screenshot #5">
-Edit project information and add notes.
+<img src="https://raw.githubusercontent.com/my443/volcano-time-tracker/master/img/Screenshot1.png" alt="Screenshot #1"><br>
+Keep a list of all of your projects.<br>
+<img src="https://raw.githubusercontent.com/my443/volcano-time-tracker/master/img/Screenshot2.png" alt="Screenshot #2"><br>
+When you do work, enter the time that you worked on that project.<br>
+<img src="https://raw.githubusercontent.com/my443/volcano-time-tracker/master/img/Screenshot3.png" alt="Screenshot #3"><br>
+Time entries can hold notes and information on the work completed.<br>
+<img src="https://raw.githubusercontent.com/my443/volcano-time-tracker/master/img/Screenshot4.png" alt="Screenshot #4"><br>
+Summary of a selected date`s time entries are reported in the Today`s Time tab.<br>
+<img src="https://raw.githubusercontent.com/my443/volcano-time-tracker/master/img/Screenshot4.png" alt="Screenshot #5"><br>
+Edit project information and add notes.<br>
 
 </div>
 
