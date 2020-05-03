@@ -1,0 +1,187 @@
+object Entries: TEntries
+  Left = 780
+  Height = 316
+  Top = 134
+  Width = 584
+  Caption = 'Time Entries'
+  ClientHeight = 316
+  ClientWidth = 584
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  LCLVersion = '1.2.6.0'
+  object Panel1: TPanel
+    Left = 8
+    Height = 240
+    Top = 48
+    Width = 568
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Caption = 'Panel1'
+    ClientHeight = 240
+    ClientWidth = 568
+    TabOrder = 0
+    object DBGrid1: TDBGrid
+      Left = 0
+      Height = 237
+      Top = 0
+      Width = 464
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      AutoEdit = False
+      Color = clWindow
+      Columns = <      
+        item
+          ButtonStyle = cbsNone
+          Title.Caption = 'ID'
+          FieldName = 'ID'
+        end      
+        item
+          Alignment = taRightJustify
+          Title.Caption = 'Time_Date'
+          FieldName = 'Time_Date'
+        end      
+        item
+          Alignment = taRightJustify
+          Title.Caption = 'Hours'
+          FieldName = 'Hours'
+        end      
+        item
+          Alignment = taRightJustify
+          Title.Caption = 'Time_Start'
+          FieldName = 'Time_Start'
+        end      
+        item
+          Alignment = taRightJustify
+          Title.Caption = 'Time_End'
+          FieldName = 'Time_End'
+        end      
+        item
+          Title.Caption = 'Memo'
+          FieldName = 'Memo'
+        end>
+      DataSource = DataSource1
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+      TabOrder = 0
+      TitleFont.CharSet = ANSI_CHARSET
+      TitleFont.Height = -13
+      TitleFont.Name = 'Arial'
+      TitleFont.Pitch = fpVariable
+      TitleFont.Quality = fqDraft
+      OnDblClick = DBGrid1DblClick
+    end
+    object NewTime: TButton
+      Left = 472
+      Height = 32
+      Top = 8
+      Width = 88
+      Anchors = [akTop, akRight]
+      Caption = 'New Time'
+      OnClick = NewTimeClick
+      TabOrder = 1
+    end
+    object EditTime: TButton
+      Left = 472
+      Height = 32
+      Top = 48
+      Width = 88
+      Anchors = [akTop, akRight]
+      Caption = 'Edit Time'
+      OnClick = EditTimeClick
+      TabOrder = 2
+    end
+    object DeleteTime: TButton
+      Left = 472
+      Height = 32
+      Top = 88
+      Width = 88
+      Anchors = [akTop, akRight]
+      Caption = 'Delete Time'
+      OnClick = DeleteTimeClick
+      TabOrder = 3
+    end
+    object CloseTime: TButton
+      Left = 472
+      Height = 32
+      Top = 128
+      Width = 88
+      Anchors = [akTop, akRight]
+      Caption = 'Close Time'
+      OnClick = CloseTimeClick
+      TabOrder = 4
+    end
+  end
+  object Proj_Title: TMemo
+    Left = 8
+    Height = 40
+    Top = 8
+    Width = 560
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
+    Color = clGradientActiveCaption
+    Enabled = False
+    Font.Height = -16
+    Font.Style = [fsBold, fsItalic]
+    Lines.Strings = (
+      'Proj_Title'
+    )
+    ParentFont = False
+    TabOrder = 1
+    TabStop = False
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 16
+    Top = 300
+    Width = 584
+    Panels = <    
+      item
+        Width = 250
+      end    
+      item
+        Width = 50
+      end>
+    SimplePanel = False
+  end
+  object SQLQuery1: TSQLQuery
+    PacketRecords = -1
+    FieldDefs = <>
+    Database = Navigation.ProjectsDatabase
+    Transaction = Navigation.SQLTransaction1
+    Params = <>
+    left = 40
+    top = 112
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    left = 200
+    top = 112
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = Navigation.ProjectsDatabase
+    left = 120
+    top = 112
+  end
+  object SUMQuery: TSQLQuery
+    FieldDefs = <>
+    Database = Navigation.ProjectsDatabase
+    Transaction = SumTransaction
+    Params = <>
+    left = 40
+    top = 176
+  end
+  object SumTransaction: TSQLTransaction
+    Active = False
+    Database = Navigation.ProjectsDatabase
+    left = 120
+    top = 176
+  end
+  object SumDatasource: TDataSource
+    DataSet = SUMQuery
+    left = 204
+    top = 176
+  end
+end

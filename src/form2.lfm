@@ -1,0 +1,162 @@
+object Form1: TForm1
+  Left = 1015
+  Height = 231
+  Top = 182
+  Width = 320
+  Caption = 'Project Entry'
+  ClientHeight = 231
+  ClientWidth = 320
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  OnActivate = FormActivate
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  LCLVersion = '1.2.6.0'
+  object SaveButton: TButton
+    Left = 160
+    Height = 25
+    Top = 200
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Save'
+    OnClick = SaveButtonClick
+    TabOrder = 5
+  end
+  object Button2: TButton
+    Left = 240
+    Height = 25
+    Top = 200
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Cancel'
+    OnClick = Button2Click
+    TabOrder = 6
+  end
+  object CheckBox1: TCheckBox
+    Left = 8
+    Height = 20
+    Top = 199
+    Width = 116
+    Anchors = [akLeft, akBottom]
+    Caption = 'Project is active.'
+    Checked = True
+    State = cbChecked
+    TabOrder = 4
+  end
+  object Label1: TLabel
+    Left = 11
+    Height = 16
+    Top = 55
+    Width = 59
+    Caption = 'Start Date'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 208
+    Height = 16
+    Top = 55
+    Width = 54
+    Anchors = [akTop, akRight]
+    Caption = 'End Date'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 11
+    Height = 16
+    Top = 6
+    Width = 79
+    Caption = 'Project Name'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 112
+    Height = 19
+    Top = 8
+    Width = 198
+    Alignment = taRightJustify
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    Caption = 'Label5'
+    Font.Color = clGray
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Proj_Name_Edit: TEdit
+    Left = 11
+    Height = 24
+    Top = 24
+    Width = 301
+    Anchors = [akTop, akLeft, akRight]
+    TabOrder = 0
+    Text = 'Proj_Name_Edit'
+  end
+  object DateEdit1: TDateEdit
+    Left = 11
+    Height = 24
+    Top = 72
+    Width = 80
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    OKCaption = 'OK'
+    CancelCaption = 'Cancel'
+    DefaultToday = True
+    DateOrder = doNone
+    ButtonWidth = 23
+    CharCase = ecNormal
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 1
+  end
+  object DateEdit2: TDateEdit
+    Left = 208
+    Height = 24
+    Top = 72
+    Width = 80
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    OKCaption = 'OK'
+    CancelCaption = 'Cancel'
+    DefaultToday = True
+    DateOrder = doNone
+    ButtonWidth = 23
+    Anchors = [akTop, akRight]
+    CharCase = ecNormal
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 2
+  end
+  object Memo1: TMemo
+    Left = 8
+    Height = 77
+    Top = 107
+    Width = 299
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Lines.Strings = (
+      'Memo1'
+    )
+    OnEnter = Memo1Enter
+    ScrollBars = ssAutoVertical
+    TabOrder = 3
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = Navigation.ProjectsDatabase
+    Transaction = Navigation.SQLTransaction1
+    Params = <>
+    left = 24
+    top = 152
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = Navigation.ProjectsDatabase
+    left = 176
+    top = 152
+  end
+  object DataSource1: TDataSource
+    DataSet = Navigation.SQLQuery1
+    left = 256
+    top = 152
+  end
+end
